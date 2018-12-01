@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.terwergreen</groupId>
-    <artifactId>bubucms-plugin-archetype</artifactId>
+    <artifactId>bugucms-plugin-archetype</artifactId>
     <version>1.0.0</version>
     <packaging>maven-archetype</packaging>
 
-    <name>bubucms-plugin-archetype</name>
+    <name>bugucms-plugin-archetype</name>
 
     <build>
         <extensions>
@@ -30,7 +30,7 @@
 
     <description>bugucms plugin for bugucms</description>
 
-    <url>https://gitee.com/youweics/bubucms-plugin</url>
+    <url>https://gitee.com/youweics/bugucms-plugin</url>
 
     <developers>
         <developer>
@@ -49,6 +49,6 @@
     </licenses>
 
     <scm>
-        <url>https://gitee.com/youweics/bubucms-plugin</url>
+        <url>https://gitee.com/youweics/bugucms-plugin</url>
     </scm>
 </project>
