@@ -46,11 +46,11 @@ public class ${pluginName}PluginExtension implements PluginInterface {
 
     private void registerBeans() {
         applicationContext.registerBean(${pluginName}Controller.class);
-        logger.info("HelloPluginExtension registerBean " + ${pluginName}Controller.class + " in applicationContext " + applicationContext);
+        logger.info("${pluginName}PluginExtension registerBean " + ${pluginName}Controller.class + " in applicationContext " + applicationContext);
         applicationContext.registerBean(${pluginName}Api.class);
-        logger.info("HelloPluginExtension registerBean " + ${pluginName}Api.class + " in applicationContext " + applicationContext);
+        logger.info("${pluginName}PluginExtension registerBean " + ${pluginName}Api.class + " in applicationContext " + applicationContext);
         applicationContext.registerBean(${pluginName}ServiceImpl.class);
-        logger.info("HelloPluginExtension registerBean " + ${pluginName}ServiceImpl.class + " in applicationContext " + applicationContext);
+        logger.info("${pluginName}PluginExtension registerBean " + ${pluginName}ServiceImpl.class + " in applicationContext " + applicationContext);
     }
 
     @Override
