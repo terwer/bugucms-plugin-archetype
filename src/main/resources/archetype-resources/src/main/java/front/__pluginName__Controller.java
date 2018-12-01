@@ -1,9 +1,9 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.plugins.hello.front;
+package ${package}.front;
 
-import ${package}.plugins.hello.service.HelloService;
+import ${package}.service.${pluginName}Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -19,14 +19,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @Description 控制器
  **/
 @Controller
-@RequestMapping("hello")
-public class HelloController {
+@RequestMapping("${pluginShortName}")
+public class ${pluginName}Controller {
     @Autowired
-    private HelloService coreService;
+    private ${pluginName}Service ${pluginShortName}Service;
 
     @RequestMapping(produces = {"text/plain;charset=utf-8"})
     @ResponseBody
-    public String hello() {
+    public String ${pluginShortName}() {
         return "Hello World!";
     }
 

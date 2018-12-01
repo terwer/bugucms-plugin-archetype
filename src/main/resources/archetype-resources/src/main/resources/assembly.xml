@@ -7,16 +7,16 @@
         <format>zip</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
-    <!-- <dependencySets>
+     <dependencySets>
         <dependencySet>
             <useProjectArtifact>false</useProjectArtifact>
             <scope>runtime</scope>
             <outputDirectory>lib</outputDirectory>
             <includes>
-                <include>${package}:*</include>
+                <include>${groupId}:*</include>
             </includes>
         </dependencySet>
-    </dependencySets> -->
+    </dependencySets>
     <fileSets>
         <fileSet>
             <directory>target/classes</directory>

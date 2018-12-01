@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.plugins.hello.service;
+package ${package}.service;
 
 /**
  * @Author Terwer
@@ -9,7 +9,7 @@ package ${package}.plugins.hello.service;
  * @Version 1.0
  * @Description 业务接口
  **/
-public interface HelloService {
+public interface ${pluginName}Service {
     /**
      * 获取系统信息
      * @return

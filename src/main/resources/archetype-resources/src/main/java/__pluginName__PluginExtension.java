@@ -1,13 +1,13 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.plugins.hello;
+package ${package};
 
-import ${package}.core.CommonService;
-import ${package}.plugins.PluginInterface;
-import ${package}.plugins.hello.front.HelloApi;
-import ${package}.plugins.hello.front.HelloController;
-import ${package}.plugins.hello.service.impl.HelloServiceImpl;
+import ${groupId}.core.CommonService;
+import ${groupId}.plugins.PluginInterface;
+import ${package}.front.${pluginName}Api;
+import ${package}.front.${pluginName}Controller;
+import ${package}.service.impl.${pluginName}ServiceImpl;
 import org.pf4j.Extension;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,42 +27,42 @@ import java.util.Map;
  * @Description 扩展点
  **/
 @Extension
-public class HelloPluginExtension implements PluginInterface {
-    private static final Logger logger = LoggerFactory.getLogger(HelloPluginExtension.class);
+public class ${pluginName}PluginExtension implements PluginInterface {
+    private static final Logger logger = LoggerFactory.getLogger(${pluginName}PluginExtension.class);
     private GenericApplicationContext applicationContext;
 
     @Autowired
-    private HelloApi helloApi;
+    private ${pluginName}Api ${pluginShortName}Api;
 
     @Autowired
     private CommonService commonService;
 
     public HelloPluginExtension(GenericApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
-        logger.info("HelloPluginExtension contructor");
+        logger.info("${pluginName}PluginExtension contructor");
         // 注册插件依赖
         registerBeans();
     }
 
     private void registerBeans() {
-        applicationContext.registerBean(HelloController.class);
-        logger.info("HelloPluginExtension registerBean " + HelloController.class + " in applicationContext " + applicationContext);
-        applicationContext.registerBean(HelloApi.class);
-        logger.info("HelloPluginExtension registerBean " + HelloApi.class + " in applicationContext " + applicationContext);
-        applicationContext.registerBean(HelloServiceImpl.class);
-        logger.info("HelloPluginExtension registerBean " + HelloServiceImpl.class + " in applicationContext " + applicationContext);
+        applicationContext.registerBean(${pluginName}Controller.class);
+        logger.info("HelloPluginExtension registerBean " + ${pluginName}Controller.class + " in applicationContext " + applicationContext);
+        applicationContext.registerBean(${pluginName}Api.class);
+        logger.info("HelloPluginExtension registerBean " + ${pluginName}Api.class + " in applicationContext " + applicationContext);
+        applicationContext.registerBean(${pluginName}ServiceImpl.class);
+        logger.info("HelloPluginExtension registerBean " + ${pluginName}ServiceImpl.class + " in applicationContext " + applicationContext);
     }
 
     @Override
     public String identify() {
-        return "HelloPlugin identify in plugin,theme is:" + commonService.getSiteConfig("webtheme");
+        return "${pluginName}Plugin identify in plugin,theme is:" + commonService.getSiteConfig("webtheme");
     }
 
     @Override
     public List<?> reactiveRoutes() {
         return new ArrayList<RouterFunction<?>>() {{
-            add(helloApi.coreApi());
-            add(helloApi.coreInfoApi());
+            add(${pluginShortName}Api.coreApi());
+            add(${pluginShortName}Api.coreInfoApi());
         }};
     }
 

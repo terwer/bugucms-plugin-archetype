@@ -1,11 +1,11 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.plugins.hello.service.impl;
+package ${package}.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import ${package}.core.CommonDAO;
-import ${package}.plugins.hello.service.HelloService;
+import ${groupId}.core.CommonDAO;
+import ${package}.service.HelloService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +23,8 @@ import java.util.Map;
  * @Description 业务实现
  **/
 @Service
-public class HelloServiceImpl implements HelloService {
-    private static final Logger log = LoggerFactory.getLogger(HelloServiceImpl.class);
+public class ${pluginName}ServiceImpl implements ${pluginName}Service {
+    private static final Logger log = LoggerFactory.getLogger(${pluginName}ServiceImpl.class);
 
     @Autowired
     private CommonDAO commonDAO;

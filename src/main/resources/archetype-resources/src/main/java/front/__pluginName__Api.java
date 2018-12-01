@@ -1,9 +1,9 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.plugins.hello.front;
+package ${package}.front;
 
-import ${package}.core.CommonService;
+import ${groupId}.core.CommonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.RouterFunction;
@@ -20,7 +20,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
  * @Description webFlux Api
  **/
 @Component
-public class HelloApi {
+public class ${pluginName}Api {
 
     @Autowired
     private CommonService commonService;

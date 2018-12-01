@@ -1,9 +1,9 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.plugins.hello;
+package ${package};
 
-import ${package}.plugins.BugucmsPlugin;
+import ${groupId}.plugins.BugucmsPlugin;
 import org.pf4j.PluginException;
 import org.pf4j.PluginWrapper;
 import org.slf4j.Logger;
@@ -15,22 +15,22 @@ import org.slf4j.LoggerFactory;
  * @Version 1.0
  * @Description Hello World
  **/
-public class HelloPlugin extends BugucmsPlugin {
-    private static final Logger logger = LoggerFactory.getLogger(HelloPlugin.class);
+public class ${pluginName}Plugin extends BugucmsPlugin {
+    private static final Logger logger = LoggerFactory.getLogger(${pluginName}Plugin.class);
 
-    public HelloPlugin(PluginWrapper wrapper) {
+    public ${pluginName}Plugin(PluginWrapper wrapper) {
         super(wrapper);
     }
 
     @Override
     public void start() throws PluginException {
         super.start();
-        logger.info("HelloPlugin started");
+        logger.info("${pluginName}Plugin started");
     }
 
     @Override
     public void stop() {
         super.stop();
-        logger.info("HelloPlugin stoped");
+        logger.info("${pluginName}Plugin stoped");
     }
 }
