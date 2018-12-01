@@ -17,18 +17,6 @@
       </includes>
     </fileSet>
     <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea/inspectionProfiles</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
       <directory></directory>
       <includes>
         <include>plugin.properties</include>
@@ -37,7 +25,8 @@
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
-        <include>bugucms-plugin-template.iml</include>
+        <include>.gitignore</include>
+        <include>README.md</include>
       </includes>
     </fileSet>
   </fileSets>

@@ -13,7 +13,7 @@
             <scope>runtime</scope>
             <outputDirectory>lib</outputDirectory>
             <includes>
-                <include>${package}.plugins.hello:*</include>
+                <include>${package}:*</include>
             </includes>
         </dependencySet>
     </dependencySets> -->
