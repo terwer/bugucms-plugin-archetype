@@ -8,7 +8,13 @@ ${pluginShortName} plugin for bugucms
 
 $symbol_pound$symbol_pound$symbol_pound$symbol_pound 安装教程
 
-1. 将 ``${artifactId}-${version}.zip`` 文件拷贝到容器项目的 ``plugins`` 目录下
+> 使用maven打包
+
+```
+mvn package -DskipTests
+```
+
+> 将 ``target/`` 目录下的 ``${artifactId}-${version}.zip`` 文件拷贝到容器项目的 ``plugins`` 目录下
 
 $symbol_pound$symbol_pound$symbol_pound$symbol_pound 联系作者
 
