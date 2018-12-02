@@ -61,8 +61,8 @@ public class ${pluginName}PluginExtension implements PluginInterface {
     @Override
     public List<?> reactiveRoutes() {
         return new ArrayList<RouterFunction<?>>() {{
-            add(${pluginShortName}Api.coreApi());
-            add(${pluginShortName}Api.coreInfoApi());
+            add(${pluginShortName}Api.${pluginShortName}Api());
+            add(${pluginShortName}Api.${pluginShortName}InfoApi());
         }};
     }
 
