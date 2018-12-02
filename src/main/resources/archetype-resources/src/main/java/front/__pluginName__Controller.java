@@ -36,7 +36,7 @@ public class ${pluginName}Controller {
         ResponseEntity<String> responseEntity = null;
         responseEntity = ResponseEntity.ok().contentType(MediaType.TEXT_PLAIN).body("Hello World");
         try {
-            String systemInfo = coreService.getSystemInfo();
+            String systemInfo = ${pluginShortName}Service.getSystemInfo();
             responseEntity = ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON_UTF8).body(systemInfo);
         } catch (Exception e) {
             e.printStackTrace();

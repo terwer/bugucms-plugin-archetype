@@ -5,7 +5,7 @@ package ${package}.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import ${groupId}.core.CommonDAO;
-import ${package}.service.HelloService;
+import ${package}.service.${pluginName}Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
