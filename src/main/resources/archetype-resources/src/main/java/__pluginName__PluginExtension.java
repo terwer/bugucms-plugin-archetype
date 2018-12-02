@@ -37,7 +37,7 @@ public class ${pluginName}PluginExtension implements PluginInterface {
     @Autowired
     private CommonService commonService;
 
-    public HelloPluginExtension(GenericApplicationContext applicationContext) {
+    public ${pluginName}PluginExtension(GenericApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
         logger.info("${pluginName}PluginExtension contructor");
         // 注册插件依赖
