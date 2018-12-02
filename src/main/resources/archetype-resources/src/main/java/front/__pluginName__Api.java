@@ -26,11 +26,11 @@ public class ${pluginName}Api {
     private CommonService commonService;
 
     public RouterFunction<?> coreApi() {
-        return route(GET("/api/hello"), req -> ServerResponse.ok().body(Mono.just("core api in plugin:systemInfo" + commonService.getSiteConfig("webname")), String.class));
+        return route(GET("/api/${pluginShortName}"), req -> ServerResponse.ok().body(Mono.just("${pluginShortName} api in plugin:systemInfo" + commonService.getSiteConfig("webname")), String.class));
     }
 
     public RouterFunction<?> coreInfoApi() {
-        return route(GET("/api/hello/info"), req -> ServerResponse.ok().body(Mono.just("core api info in plugin"), String.class));
+        return route(GET("/api/${pluginShortName}/info"), req -> ServerResponse.ok().body(Mono.just("${pluginShortName} api info in plugin"), String.class));
     }
 }
 
