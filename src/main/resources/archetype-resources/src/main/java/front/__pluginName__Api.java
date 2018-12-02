@@ -25,11 +25,11 @@ public class ${pluginName}Api {
     @Autowired
     private CommonService commonService;
 
-    public RouterFunction<?> coreApi() {
+    public RouterFunction<?> ${pluginShortName}Api() {
         return route(GET("/api/${pluginShortName}"), req -> ServerResponse.ok().body(Mono.just("${pluginShortName} api in plugin:systemInfo" + commonService.getSiteConfig("webname")), String.class));
     }
 
-    public RouterFunction<?> coreInfoApi() {
+    public RouterFunction<?> ${pluginShortName}InfoApi() {
         return route(GET("/api/${pluginShortName}/info"), req -> ServerResponse.ok().body(Mono.just("${pluginShortName} api info in plugin"), String.class));
     }
 }
