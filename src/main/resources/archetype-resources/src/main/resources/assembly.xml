@@ -8,14 +8,14 @@
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
      <dependencySets>
-        <dependencySet>
+        <!-- <dependencySet>
             <useProjectArtifact>false</useProjectArtifact>
             <scope>runtime</scope>
             <outputDirectory>lib</outputDirectory>
             <includes>
                 <include>${groupId}:*</include>
             </includes>
-        </dependencySet>
+        </dependencySet> -->
     </dependencySets>
     <fileSets>
         <fileSet>
