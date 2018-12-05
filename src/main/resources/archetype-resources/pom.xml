@@ -87,8 +87,8 @@
 
     <repositories>
         <repository>
-            <id>terwer</id>
-            <url>https://raw.github.com/terwer/repository/master/repository</url>
+            <id>nexus-aliyun</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
         </repository>
     </repositories>
 </project>
