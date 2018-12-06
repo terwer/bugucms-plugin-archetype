@@ -11,7 +11,7 @@ $symbol_pound$symbol_pound$symbol_pound$symbol_pound 安装教程
 > 使用maven打包
 
 ```
-mvn package -DskipTests
+mvn clean package -DskipTests
 ```
 
 > 将 ``target/`` 目录下的 ``${artifactId}-${version}.zip`` 文件拷贝到容器项目的 ``plugins`` 目录下

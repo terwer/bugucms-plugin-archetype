@@ -1,6 +1,9 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
+#set( $ldt = $package.getClass().forName("java.time.LocalDateTime").getMethod("now").invoke(null) )
+#set( $dtf = $package.getClass().forName("java.time.format.DateTimeFormatter").getMethod("ofPattern", $package.getClass()).invoke(null, "yyyy/MM/dd HH:mm:ss") )
+#set( $date = $ldt.format($dtf) )
 package ${package};
 
 import ${groupId}.plugins.BugucmsPlugin;
@@ -10,10 +13,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @Author Terwer
- * @Date 2018/11/27 16:03
- * @Version 1.0
- * @Description Hello World
+ * 插件
+ *
+ * @author Terwer
+ * @version 1.0
+ * ${date}
  **/
 public class ${pluginName}Plugin extends BugucmsPlugin {
     private static final Logger logger = LoggerFactory.getLogger(${pluginName}Plugin.class);

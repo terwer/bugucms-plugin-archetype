@@ -20,7 +20,7 @@ mvn clean install -Darchetype.test.skip
 ```
 GroupId:com.terwergreen         
 ArtifactId:bugucms-plugin-archetype                   
-Version:1.0.2             
+Version:1.0.5             
 ```
 
 > 选择刚刚添加的archetype，点击 ``next``，输入新项目的信息                 
@@ -28,7 +28,7 @@ Version:1.0.2
 ```
 GroupId:com.terwergreen                      
 ArtifactId:demo-plugin                                 
-Version:1.0.2           
+Version:1.0.5           
 ```
 
 > 点击 ``Next`` ，输入其他参数            
@@ -38,10 +38,6 @@ package=com.terwergreen.plugins.demo
 pluginName=Demo
 pluginShortName=demo
 ```
-
-完整的参数如下：
-
-![](screenshorts/properties.png)
 
 > 点击 ``Next`` ，输入项目名及项目路径            
 

@@ -1,6 +1,9 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
+#set( $ldt = $package.getClass().forName("java.time.LocalDateTime").getMethod("now").invoke(null) )
+#set( $dtf = $package.getClass().forName("java.time.format.DateTimeFormatter").getMethod("ofPattern", $package.getClass()).invoke(null, "yyyy/MM/dd HH:mm:ss") )
+#set( $date = $ldt.format($dtf) )
 package ${package}.front;
 
 import ${groupId}.core.CommonService;
@@ -14,23 +17,13 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
 /**
- * @Author Terwer
- * @Date 2018/11/23 15:02
- * @Version 1.0
- * @Description webFlux Api
+ * webFlux Api
+ *
+ * @author Terwer
+ * @version 1.0
+ * $date
  **/
 @Component
 public class ${pluginName}Api {
-
-    @Autowired
-    private CommonService commonService;
-
-    public RouterFunction<?> ${pluginShortName}Api() {
-        return route(GET("/api/${pluginShortName}"), req -> ServerResponse.ok().body(Mono.just("${pluginShortName} api in plugin:systemInfo" + commonService.getSiteConfig("webname")), String.class));
-    }
-
-    public RouterFunction<?> ${pluginShortName}InfoApi() {
-        return route(GET("/api/${pluginShortName}/info"), req -> ServerResponse.ok().body(Mono.just("${pluginShortName} api info in plugin"), String.class));
-    }
 }
 

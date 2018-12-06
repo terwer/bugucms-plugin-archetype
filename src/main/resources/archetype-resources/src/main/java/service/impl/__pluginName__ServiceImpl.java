@@ -1,6 +1,9 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
+#set( $ldt = $package.getClass().forName("java.time.LocalDateTime").getMethod("now").invoke(null) )
+#set( $dtf = $package.getClass().forName("java.time.format.DateTimeFormatter").getMethod("ofPattern", $package.getClass()).invoke(null, "yyyy/MM/dd HH:mm:ss") )
+#set( $date = $ldt.format($dtf) )
 package ${package}.service.impl;
 
 import com.alibaba.fastjson.JSON;
@@ -17,10 +20,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author Terwer
- * @Date 2018/11/23 15:54
- * @Version 1.0
- * @Description 业务实现
+ * 业务实现
+ *
+ * @author Terwer
+ * @version 1.0
+ * $date
  **/
 @Service
 public class ${pluginName}ServiceImpl implements ${pluginName}Service {
@@ -30,7 +34,7 @@ public class ${pluginName}ServiceImpl implements ${pluginName}Service {
     private CommonDAO commonDAO;
 
     @Override
-    public String getSystemInfo() {
+    public String get${pluginName}Info() {
         List list = null;
         try {
             Map paramMap = new HashMap();
@@ -42,11 +46,7 @@ public class ${pluginName}ServiceImpl implements ${pluginName}Service {
         }
         //多个结果返回List，只有一个结果的时候直接返回
         if (!CollectionUtils.isEmpty(list)) {
-            if (list.size() == 1) {
-                return JSON.toJSONString(list.get(0));
-            } else {
-                return JSON.toJSONString(list);
-            }
+            return JSON.toJSONString(list);
         }
         return "no data";
     }
