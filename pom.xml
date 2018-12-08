@@ -4,7 +4,7 @@
 
     <groupId>com.terwergreen</groupId>
     <artifactId>bugucms-plugin-archetype</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <packaging>maven-archetype</packaging>
 
     <name>bugucms-plugin-archetype</name>
