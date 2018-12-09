@@ -24,7 +24,7 @@ import org.springframework.stereotype.Service;
  **/
 @Service
 public class ${pluginName}ServiceImpl implements ${pluginName}Service {
-    private static final Logger log = LoggerFactory.getLogger(${pluginName}ServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(${pluginName}ServiceImpl.class);
 
     @Autowired
     private CommonService commonService;
