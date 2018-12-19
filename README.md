@@ -20,7 +20,7 @@ mvn clean install -Darchetype.test.skip
 ```
 GroupId:com.terwergreen         
 ArtifactId:bugucms-plugin-archetype                   
-Version:1.0.8             
+Version:1.0.9             
 ```
 
 > 选择刚刚添加的archetype，点击 ``next``，输入新项目的信息                 
@@ -28,7 +28,7 @@ Version:1.0.8
 ```
 GroupId:com.terwergreen                      
 ArtifactId:demo-plugin                                 
-Version:1.0.8           
+Version:1.0.9           
 ```
 
 > 点击 ``Next`` ，输入其他参数            
