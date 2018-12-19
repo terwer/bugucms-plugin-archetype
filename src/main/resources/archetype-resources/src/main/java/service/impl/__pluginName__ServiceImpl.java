@@ -30,7 +30,7 @@ public class ${pluginName}ServiceImpl implements ${pluginName}Service {
     private CommonService commonService;
 
     @Override
-    public String get{pluginName}Info() {
+    public String get${pluginName}Info() {
         SiteConfig siteConfig = commonService.getSiteConfig();
         if (null != siteConfig) {
         return JSON.toJSONString(siteConfig);
